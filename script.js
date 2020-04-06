@@ -21,31 +21,24 @@ $(function(){
     $('#header__corporate').hover(
         function() {
           //カーソルが重なった時
-            $('#navigation__corporate').addClass('open');
-            $('.header__wrapper').addClass('open1');
-        //     $('#navigation__corporate').on('mousemove', function(){
-        //     $('.header__wrapper').addClass('open');
-        // });
+            // $('#navigation__corporate').addClass('open');
+            // $('.header__wrapper').addClass('open1');
+            $('.header__wrapper, .navigation').on({
+                'mouseenter': function() {
+                    $('#navigation__corporate').addClass('open');
+                    $('.header__wrapper').addClass('open1');
+                },
+                'mouseleave': function() {
+                    // console.log('マウスが出ていった');
+                    $('#navigation__corporate').removeClass('open');
+                    $('.header__wrapper').removeClass('open1');
+                }
+            })
+
         }, function() {
-          //カーソルが離れた時
-            $('#navigation__corporate').removeClass('open');
-            $('.header__wrapper').removeClass('open1');
+          //カーソルが離れた
+            // $('#navigation__corporate').removeClass('open');
+            // $('.header__wrapper').removeClass('open1');
         }
     );
-
-    // $(function() {
-    //     $('.nav-button-wrap').on('click', function() {
-    //       if ($(this).hasClass('active')) {
-    //         // スマホ用メニューが表示されていたとき
-    //         $(this).removeClass('active');
-    //         $('.globalnav').addClass('close');
-    //         $('.globalnav-wrap , body').removeClass('open');
-    //       } else {
-    //         // スマホ用メニューが非表示の時
-    //         $(this).addClass('active');
-    //         $('.globalnav').removeClass('close');
-    //         $('.globalnav-wrap , body').addClass('open');
-    //       }
-    //     });
-    // });
 });
