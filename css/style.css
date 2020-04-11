@@ -14,6 +14,10 @@ a:hover {
     color: #82be28;
     transition: all .25s cubic-bezier(.26,.48,.47,.71);
 }
+.a--hovered {
+    color: #82be28;
+    transition: all .25s cubic-bezier(.26,.48,.47,.71);
+}
 *::selection {
     background-color: #82be28;
     color: white;
@@ -934,11 +938,12 @@ footer {
         order: 2;
     }
     .footer__nav-item {
-        width: 47%;
+        width: calc(50% - 0.5px);
         border-top: 1px solid gray;
         text-align: center;
         margin: 0 auto;
         border-bottom: 1px solid gray;
+        padding-right: 0px;
     }
     .footer__border {
         border-left: 1px solid gray;
@@ -1179,6 +1184,7 @@ footer {
 
 /* page-top */
 #page_top {
+    z-index: 3;
     position: fixed;
     right: 25px;
     bottom: 30px;

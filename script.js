@@ -44,10 +44,13 @@ $(function() {
             const id = $(this).attr('id');
             // 対象のnavigationのIDを作る
             const navigationId = id.replace('header', 'navigation');
-            // 表示されてるnavigationを非表示にする
-            $('.navigation').not('#' + navigationId).fadeOut(.1);
-            // ホバーしてるheader__nav-itemに対応するnavigationを表示
-            $('#' + navigationId).fadeIn();
+            $.when(
+                // 表示されてるnavigationを非表示にする
+                $('.navigation').not('#' + navigationId).css('display', 'none')
+            ).done(function() {
+                // ホバーしてるheader__nav-itemに対応するnavigationを表示
+                $('#' + navigationId).fadeIn();
+            });
             let headerHeight = '';
             switch (id) {
                 case 'header__news':
@@ -131,5 +134,13 @@ $(function() {
         $('#search__all').addClass('search__box--text2');
         $('#search__news').addClass('search__box--text2');
         $(this).addClass('search__box--text1');
+    });
+
+    $('a').on('touchstart', function() {
+        // touchされたとき
+        $(this).addClass('.a--hovered');
+    }).on('touchend', function() {
+        // 離れた時
+        $(this).removeClass('.a--hovered');
     });
 });
