@@ -6,11 +6,38 @@
     <meta name="description" content="模写コーディング">
     <title>模写練習</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="no-scroll">
+    <section class="search" id="search">
+        <a href="#" class="search__back">
+            <i class="fas fa-times search__cross"></i>
+        </a>
+        <div class="search__heading">
+            <h2 class="search__title">Search</h2>
+            <p class="search__subtitle">検索</p>
+        </div>
+        <div class="search__wrapper">
+            <form method="get" action="#" class="search__form">
+                <input type="text" placeholder="サイト内検索" class="search__text">
+                <button type="submit" class="search__btn"><i class="fas fa-search search__angle"></i></button>
+            </form>
+                <div class="search__box">
+                    <div class="search__all">
+                        <a href="#" class="search__box--text1" id="search__all">すべて</a>
+                    </div>
+                    <div class="search__news">
+                        <a href="#" class="search__box--text2" id="search__news">ニュース</a>
+                    </div>
+                    <div class="search__features">
+                        <a href="#" class="search__box--text2" id="search__features">FEATUReS</a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
     <header class="header" id="header_top">
         <div class="header__wrapper">
             <h1 class="header__logo">
@@ -18,28 +45,28 @@
             </h1>
             <div class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item">
-                        <a href="#" class="header__link" id="header__corporate">企業</a>
+                    <li class="header__nav-item" id="header__corporate">
+                        <a href="#" class="header__link">企業</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__news">
                         <a href="#" class="header__link">ニュース</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__service">
                         <a href="#" class="header__link">サービス</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__tech">
                         <a href="#" class="header__link">技術・デザイン</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__career">
                         <a href="#" class="header__link">採用</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__ir">
                         <a href="#" class="header__link">IR</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__cyberagent">
                         <a href="#" class="header__link">CyberAgent Way</a>
                     </li>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" id="header__features">
                         <a href="#" class="header__link header__link--bold">FEATUReS</a>
                     </li>
                 </ul>
@@ -52,6 +79,7 @@
             </div>
         </div>
         <div class="navigation" id="navigation__corporate">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -118,7 +146,8 @@
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__news">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -166,7 +195,8 @@
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__service">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -213,7 +243,8 @@
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__tech">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -260,7 +291,8 @@
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__career">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -331,22 +363,9 @@
                             </li>
                         </li>
                     </ul>
-                    <ul class="navigation__list">
-                        <li class="navigation__link">
-                            <a href="#" class="navigtion__text">
-                                ニュース＆コンテンツ
-                            </a>
-                            <li class="navigation__sublink">
-                                <a href="#" class="navigation__subtext">- 採用ニュース</a>
-                            </li>
-                            <li class="navigation__sublink">
-                                <a href="#" class="navigation__subtext">- FEATUReS（特集記事）</a>
-                            </li>
-                        </li>
-                    </ul>
                 </div>
                 <div class="navigation__bottom">
-                    <div class="pickup">
+                    <div class="pickup" id="pickup__career">
                         <p class="pickup__title">新卒採用ピックアップ</p>
                         <div class="pickup__list">
                             <a href="#" class="pickup__link">- マイページ</a>
@@ -371,7 +390,8 @@
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__ir">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -438,9 +458,22 @@
                             </li>
                         </li>
                     </ul>
+                    <ul class="navigation__list">
+                        <li class="navigation__link">
+                            <a href="#" class="navigtion__text">
+                                ニュース＆コンテンツ
+                            </a>
+                            <li class="navigation__sublink">
+                                <a href="#" class="navigation__subtext">- 採用ニュース</a>
+                            </li>
+                            <li class="navigation__sublink">
+                                <a href="#" class="navigation__subtext">- FEATUReS（特集記事）</a>
+                            </li>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navigation__bottom">
-                    <div class="pickup">
+                    <div class="pickup" id="pickup__ir">
                         <p class="pickup__title">ピックアップ</p>
                         <div class="pickup__list">
                             <a href="#" class="pickup__link">- 個人投資家のみなさまへ</a>
@@ -449,23 +482,11 @@
                             <a href="#" class="pickup__link">- IRカレンダー</a>
                         </div>
                     </div>
-                    <ul class="newscontent">
-                        <li class="newscontent__link">
-                            <a href="#" class="newscontent__text">
-                                ニュース＆コンテンツ
-                            </a>
-                            <li class="newscontent__sublink">
-                                <a href="#" class="newscontent__subtext">- 採用ニュース</a>
-                            </li>
-                            <li class="newscontent__sublink">
-                                <a href="#" class="newscontent__subtext">- FEATUReS（特集記事）</a>
-                            </li>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__cyberagent">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -533,7 +554,8 @@
                 </div>
             </div>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation__features">
+            <hr class="ndvigation__hr">
             <div class="navigation__contact">
                 <a href="#" class="navigation__contact-link">
                     <i class="far fa-envelope navigation__contact-icon"></i>お問い合わせ
@@ -584,7 +606,7 @@
                     </ul>
                 </div>
                 <div class="navigation__bottom">
-                    <div class="pickup">
+                    <div class="pickup" id="pickup__features">
                         <p class="pickup__title">ピックアップ</p>
                         <div class="pickup__list">
                             <a href="#" class="pickup__link">- #AmemaTV</a>
