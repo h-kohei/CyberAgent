@@ -14,10 +14,6 @@ a:hover {
     color: #82be28;
     transition: all .25s cubic-bezier(.26,.48,.47,.71);
 }
-.a--hovered {
-    color: #82be28;
-    transition: all .25s cubic-bezier(.26,.48,.47,.71);
-}
 *::selection {
     background-color: #82be28;
     color: white;

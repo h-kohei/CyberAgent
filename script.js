@@ -136,11 +136,4 @@ $(function() {
         $(this).addClass('search__box--text1');
     });
 
-    $('a').on('touchstart', function() {
-        // touchされたとき
-        $(this).addClass('.a--hovered');
-    }).on('touchend', function() {
-        // 離れた時
-        $(this).removeClass('.a--hovered');
-    });
 });
